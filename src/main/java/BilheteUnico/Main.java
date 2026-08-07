@@ -2,6 +2,7 @@ package BilheteUnico;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,6 +29,13 @@ public class Main {
         bilhetes.add(b2);
         bilhetes.add(b3);
         bilhetes.add(b4);
+
+        int opcao = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        while (opcao != 9) {
+            exibirMenu();
+        }
     }
     public static void exibirMenu() {
         System.out.println("BILHETE ÚNICO");
