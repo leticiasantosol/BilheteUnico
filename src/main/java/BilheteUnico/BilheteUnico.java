@@ -1,6 +1,6 @@
 package BilheteUnico;
 
-public class BilheteUnico {
+public abstract class BilheteUnico {
     private String codigo;
     private Usuario usuario;
 
