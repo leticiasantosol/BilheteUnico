@@ -1,5 +1,4 @@
-package org.example;
-
+package BilheteUnico;
 
 public class Main {
     public static void main(String[] args) {
