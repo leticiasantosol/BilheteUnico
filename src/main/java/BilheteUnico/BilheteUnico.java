@@ -19,4 +19,14 @@ public class BilheteUnico {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    public BilheteUnico (String codigoDoBilhete, Usuario usuarioInformacoes) {
+        this.codigo = codigoDoBilhete;
+        this.usuario = usuarioInformacoes;
+    }
+
+    public abstract void  pagarPassagem ();
+
+    public abstract void  recarregarBilhete (double valor);
+
 }
