@@ -29,4 +29,19 @@ public class Main {
         bilhetes.add(b3);
         bilhetes.add(b4);
     }
+    public static void exibirMenu() {
+        System.out.println("BILHETE ÚNICO");
+        System.out.println("+----------------------------------------------------+");
+        System.out.println("|   Menu Principal                                   |");
+        System.out.println("|   Informe a opção desejada ou 9 para sair          |");
+        System.out.println("+----------------------------------------------------+");
+        System.out.println("|   1 = Cadastrar Usuário                            |");
+        System.out.println("|   2 = Cadastrar Bilhete                            |");
+        System.out.println("|   3 = Recarregar Bilhete                           |");
+        System.out.println("|   4 = Pagar Passagem                               |");
+        System.out.println("|   5 = Listar Bilhetes                              |");
+        System.out.println("|   6 = Pesquisar Bilhete por CPF                    |");
+        System.out.println("+----------------------------------------------------+");
+        System.out.print("Opção: ");
+    }
 }
