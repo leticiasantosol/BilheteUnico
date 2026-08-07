@@ -1,6 +1,7 @@
 package BilheteUnico;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -35,6 +36,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while (opcao != 9) {
             exibirMenu();
+
+            try {
+
+            }catch (InputMismatchException e) {
+                System.out.println("Digite apenas números.");
+                scanner.nextLine();
+            }
         }
     }
     public static void exibirMenu() {
