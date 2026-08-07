@@ -6,4 +6,14 @@ public class BilheteEstudante extends BilheteUnico{
     }
 
     private int cotas;
+
+    @Override
+    public void pagarPassagem() {
+        if (cotas > 0) {
+            cotas --;
+        }else {
+            System.out.println("Cotas indisponível.");
+        }
+
+    }
 }
