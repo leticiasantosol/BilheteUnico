@@ -7,4 +7,13 @@ public class BilheteComum extends BilheteUnico {
 
     private double saldo;
     private static final double valorPassagem = 5.0;
+
+    @Override
+    public void pagarPassagem() {
+        if (saldo >= valorPassagem ) {
+            saldo -= valorPassagem;
+        }else {
+            System.out.println("Saldo indisponível.");
+        }
+    }
 }
