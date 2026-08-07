@@ -16,4 +16,13 @@ public class BilheteComum extends BilheteUnico {
             System.out.println("Saldo indisponível.");
         }
     }
+
+    @Override
+    public void recarregarBilhete(double valor) {
+        if (valor > 0) {
+            saldo += valor;
+        }else {
+            System.out.println("Valor de recarga inválido.");
+        }
+    }
 }
