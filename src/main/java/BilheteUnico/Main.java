@@ -38,8 +38,41 @@ public class Main {
             exibirMenu();
 
             try {
+                opcao = scanner.nextInt();
 
-            }catch (InputMismatchException e) {
+                switch (opcao) {
+
+                    case 1: {
+                        String nome;
+                        String email;
+                        String cpf;
+                        String telefone;
+
+                        scanner.nextLine();
+
+                        System.out.println("Nome: ");
+                        nome = scanner.nextLine();
+
+                        System.out.println("Email: ");
+                        email = scanner.next();
+
+                        System.out.println("CPF: ");
+                        cpf = scanner.next();
+
+                        System.out.println("Telefone: ");
+                        telefone = scanner.next();
+
+                        Usuario novoUsuario = new Usuario(nome, email, cpf, telefone);
+
+                        usuarios.add(novoUsuario);
+
+                        System.out.println("Usuário cadastrado com sucesso!");
+
+                        break;
+                    }
+
+                }
+            } catch (InputMismatchException e) {
                 System.out.println("Digite apenas números.");
                 scanner.nextLine();
             }
