@@ -1,4 +1,5 @@
 package BilheteUnico;
 
-public class BilheteEstudante {
+public class BilheteEstudante extends BilheteUnico{
+
 }
