@@ -71,6 +71,52 @@ public class Main {
                         break;
                     }
 
+                    case 2: {
+                        String cpfUsuario;
+                        int tipoBilhete;
+                        String codigoBilhete;
+
+                        System.out.println("Digite seu CPF:  ");
+                        cpfUsuario = scanner.next();
+
+                        Usuario usuarioEncontrado = null;
+                        for (Usuario usuario : usuarios) {
+                            if (cpfUsuario.equals(usuario.getCpf())) {
+                                usuarioEncontrado = usuario;
+                                break;
+                            }
+                        }
+
+                        if (usuarioEncontrado == null) {
+                            System.out.println("Usuário não encontrado");
+                        } else {
+                            System.out.println("Qual tipo de bilhete você deseja cadastrar?");
+                            System.out.println("1 - Bilhete Comum");
+                            System.out.println("2 - Bilhete Estudante");
+                            tipoBilhete = scanner.nextInt();
+
+                            if (tipoBilhete == 1 || tipoBilhete == 2) {
+
+                                System.out.println("Qual o código do bilhete?");
+                                codigoBilhete = scanner.next();
+
+                                BilheteUnico novoBilhete;
+
+                                if (tipoBilhete == 1) {
+                                    novoBilhete = new BilheteComum(codigoBilhete, usuarioEncontrado);
+                                } else {
+                                    novoBilhete = new BilheteEstudante(codigoBilhete, usuarioEncontrado);
+                                }
+
+                                bilhetes.add(novoBilhete);
+                                System.out.println("Bilhete cadastrado com sucesso!");
+
+                            } else {
+                                System.out.println("Tipo de bilhete inválido.");
+                            }
+                        }
+                        break;
+                    }
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Digite apenas números.");
