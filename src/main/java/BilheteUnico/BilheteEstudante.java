@@ -16,4 +16,9 @@ public class BilheteEstudante extends BilheteUnico{
         }
 
     }
+
+    @Override
+    public void recarregarBilhete(double ignored) {
+        cotas += 48;
+    }
 }
