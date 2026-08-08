@@ -144,6 +144,30 @@ public class Main {
                         }
                         break;
                     }
+                    case 4: {
+                        String codigoBilhete;
+
+                        System.out.println("Qual o código do bilhete?");
+                        codigoBilhete = scanner.next();
+
+                        BilheteUnico bilheteEncontrado = null;
+                        for (BilheteUnico bilhete : bilhetes) {
+                            if (codigoBilhete.equals(bilhete.getCodigo())) {
+                                bilheteEncontrado = bilhete;
+                                break;
+                            }
+                        }
+
+                        if (bilheteEncontrado == null) {
+                            System.out.println("Bilhete não encontrado.");
+                        } else {
+
+                            bilheteEncontrado.pagarPassagem();
+
+                            System.out.println("Passagem paga com sucesso!");
+                        }
+                        break;
+                    }
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Digite apenas números.");
