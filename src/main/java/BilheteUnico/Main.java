@@ -168,6 +168,16 @@ public class Main {
                         }
                         break;
                     }
+                    case 5: {
+                        for (BilheteUnico bilhete : bilhetes) {
+                            System.out.println("Código: " + bilhete.getCodigo());
+                            System.out.println("Nome: " + bilhete.getUsuario().getNome());
+                            System.out.println("CPF: " + bilhete.getUsuario().getCpf());
+                            System.out.println("Email: " + bilhete.getUsuario().getEmail());
+                            System.out.println("Telefone: " + bilhete.getUsuario().getTelefone());
+                        }
+                        break;
+                    }
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Digite apenas números.");
