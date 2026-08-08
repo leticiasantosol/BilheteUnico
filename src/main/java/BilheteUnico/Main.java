@@ -204,6 +204,14 @@ public class Main {
                         }
                         break;
                     }
+                    case 9: {
+                        System.out.println("Encerrando...");
+                        break;
+                    }
+
+                    default: {
+                        System.out.println("Opção Inválida");
+                    }
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Digite apenas números.");
