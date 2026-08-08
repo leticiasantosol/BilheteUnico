@@ -117,6 +117,33 @@ public class Main {
                         }
                         break;
                     }
+                    case 3: {
+                        String codigoBilhete;
+                        double recarga;
+
+                        System.out.println("Qual o código do bilhete?");
+                        codigoBilhete = scanner.next();
+
+                        BilheteUnico bilheteEncontrado = null;
+                        for (BilheteUnico bilhete : bilhetes) {
+                            if (codigoBilhete.equals(bilhete.getCodigo())) {
+                                bilheteEncontrado = bilhete;
+                                break;
+                            }
+                        }
+
+                        if (bilheteEncontrado == null) {
+                            System.out.println("Bilhete não encontrado.");
+                        } else {
+                            System.out.println("Qual o valor da recarga?");
+                            recarga = scanner.nextInt();
+
+                            bilheteEncontrado.recarregarBilhete(recarga);
+
+                            System.out.println("Bilhete recarregado com sucesso!");
+                        }
+                        break;
+                    }
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Digite apenas números.");
