@@ -178,6 +178,32 @@ public class Main {
                         }
                         break;
                     }
+                    case 6: {
+                        String cpfUsuario;
+
+                        System.out.println("Digite o CPF:");
+                        cpfUsuario = scanner.next();
+
+                        BilheteUnico bilheteEncontrado = null;
+
+                        for (BilheteUnico bilhete : bilhetes) {
+                            if (cpfUsuario.equals(bilhete.getUsuario().getCpf())) {
+                                bilheteEncontrado = bilhete;
+                                break;
+                            }
+                        }
+
+                        if (bilheteEncontrado == null) {
+                            System.out.println("Bilhete não encontrado.");
+                        } else {
+                            System.out.println("Código: " + bilheteEncontrado.getCodigo());
+                            System.out.println("Nome: " + bilheteEncontrado.getUsuario().getNome());
+                            System.out.println("CPF: " + bilheteEncontrado.getUsuario().getCpf());
+                            System.out.println("Email: " + bilheteEncontrado.getUsuario().getEmail());
+                            System.out.println("Telefone: " + bilheteEncontrado.getUsuario().getTelefone());
+                        }
+                        break;
+                    }
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Digite apenas números.");
